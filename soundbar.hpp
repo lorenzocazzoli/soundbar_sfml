@@ -16,13 +16,71 @@ void soundbar() {
 
 
   //Acquisizione e creazione audio
+  //1,1
   sf::SoundBuffer bruh_buffer;
-  if (!bruh_buffer.loadFromFile("bruh_se.wav")){
-    std::cout << "errore nel caricamento di qualche audio" << '\n';
+  if (!bruh_buffer.loadFromFile("sounds/bruh_se.wav")){
+    std::cout << "errore nel caricamento di bruh" << '\n';
   }
   sf::Sound bruh;
   bruh.setBuffer(bruh_buffer);
+
+  //2,1
+  sf::SoundBuffer saul_buffer;
+  if (!saul_buffer.loadFromFile("sounds/saul_se.ogg")){
+    std::cout << "errore nel caricamento di saul" << '\n';
+  }
+  sf::Sound saul;
+  saul.setBuffer(saul_buffer);
+
+  //3,1
+  sf::SoundBuffer pussy_buffer;
+  if (!pussy_buffer.loadFromFile("sounds/pussy_se.ogg")){
+    std::cout << "errore nel caricamento di pussy" << '\n';
+  }
+  sf::Sound pussy;
+  pussy.setBuffer(pussy_buffer);
+
+  //4,1
+  sf::SoundBuffer dog_doing_buffer;
+  if (!dog_doing_buffer.loadFromFile("sounds/dog_doing_se.ogg")){
+    std::cout << "errore nel caricamento di dog_doing" << '\n';
+  }
+  sf::Sound dog_doing;
+  dog_doing.setBuffer(dog_doing_buffer);
+
+  //5,1
+  sf::SoundBuffer gangsta_buffer;
+  if (!gangsta_buffer.loadFromFile("sounds/gangsta_se.ogg")){
+    std::cout << "errore nel caricamento di gangsta" << '\n';
+  }
+  sf::Sound gangsta;
+  gangsta.setBuffer(gangsta_buffer);
+
+  //6,1
+  sf::SoundBuffer boom_buffer;
+  if (!boom_buffer.loadFromFile("sounds/boom_se.ogg")){
+    std::cout << "errore nel caricamento di boom" << '\n';
+  }
+  sf::Sound boom;
+  boom.setBuffer(boom_buffer);
+
+  //7,1
+  sf::SoundBuffer augh_buffer;
+  if (!augh_buffer.loadFromFile("sounds/augh_se.ogg")){
+    std::cout << "errore nel caricamento di augh" << '\n';
+  }
+  sf::Sound augh;
+  augh.setBuffer(augh_buffer);
+
+  //8,1
+  sf::SoundBuffer healing_buffer;
+  if (!healing_buffer.loadFromFile("sounds/healing_se.ogg")){
+    std::cout << "errore nel caricamento di healing" << '\n';
+  }
+  sf::Sound healing;
+  healing.setBuffer(healing_buffer);
   
+
 
 
   //Creazione di finestra grafica
@@ -36,8 +94,6 @@ void soundbar() {
   //Disegno sfondo
   sf::Sprite sfondo;
   sfondo.setTexture(griglia);
-  //sfondo.setOrigin(0., 0.);
-  //sfondo.setPosition(0., 0.);
   window.clear(sf::Color::Blue);
   window.draw(sfondo);
   window.display();
@@ -80,9 +136,36 @@ void soundbar() {
                     {
                     case 1:
                         bruh.play();
-                        std::cout<<"megapalle"<<"\n";
                         break;
-            
+
+                    case 2:
+                        saul.play();
+                        break;
+
+                    case 3:
+                        pussy.play();
+                        break;
+
+                    case 4:
+                        dog_doing.play();
+                        break;
+
+                    case 5:
+                        gangsta.play();
+                        break;
+                        
+                    case 6:
+                        boom.play();
+                        break;
+
+                    case 7:
+                        augh.play();
+                        break;
+
+                    case 8:
+                        healing.play();
+                        break;
+
                     default:
                         break;
                     }
